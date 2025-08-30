@@ -2,22 +2,7 @@ import importlib.metadata
 packages = [
     "langchain",
     "python-dotenv",
-    "ipykernel",
-    "langchain_groq",
-    "langchain_google_genai",
-    "langchain-community",
-    "faiss-cpu",
-    "structlog",
-    "PyMuPDF",
-    "pylint",
-    "langchain-core",
-    "pytest",
-    "streamlit",
-    "fastapi",
-    "uvicorn",
-    "python-multipart",
-    "docx2txt",
-    "pypdf"
+    "langchain_core"
 ]
 for pkg in packages:
     try:
@@ -25,7 +10,3 @@ for pkg in packages:
         print(f"{pkg}=={version}")
     except importlib.metadata.PackageNotFoundError:
         print(f"{pkg} (not installed)")
-
-# # serve static & templates
-# app.mount("/static", StaticFiles(directory="../static"), name="static")
-# templates = Jinja2Templates(directory="../templates")
